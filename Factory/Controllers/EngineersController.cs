@@ -1,5 +1,6 @@
 using Factory.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq;
 
 namespace Factory.Controllers
@@ -16,6 +17,12 @@ namespace Factory.Controllers
     public ActionResult Index()
     {
       return View(_db.Engineers.ToList());
+    }
+
+    public ActionResult Create()
+    {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View();
     }
   }
 }
