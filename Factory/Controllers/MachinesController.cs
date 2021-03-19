@@ -58,8 +58,9 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Machine machine, int EngineerId)
+    public ActionResult Edit(Machine machine, int EngineerId, DateTime InstallationDate)
     {
+      machine.InstallationDate = InstallationDate;
       if (EngineerId != 0)
       {
         _db.Repair.Add(new Repair { EngineerId = EngineerId, MachineId = machine.MachineId });
