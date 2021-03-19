@@ -18,5 +18,9 @@
   <li>@Html.ActionLink($"{machine.Name}", "Detail", new { id = machine.MachineId })</li>
 }
 </ul>
-<button>@Html.ActionLink("Home", "Index", "Home")</button>
+
 <button>@Html.ActionLink("New machine", "Create")</button>
+<hr/>
+<button>@Html.ActionLink("Home", "Index", "Home")</button>
+<button>@Html.ActionLink("All machines", "Index")</button>
+<button>@Html.ActionLink("All engineers", "Index", "Engineers")</button>
