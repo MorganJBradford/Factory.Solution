@@ -1,6 +1,7 @@
 using Factory.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Linq;
 
 namespace Factory.Controllers
@@ -23,6 +24,20 @@ namespace Factory.Controllers
     {
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Engineer engineer, int MachineId)
+    {
+      engineer.HireDate = DateTime.Now;
+      _db.Engineers.Add(engineer);
+      _db.SaveChanges();
+      if (MachineId != 0)
+      {
+        _db.Repair.Add(new Repair() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
   }
 }
