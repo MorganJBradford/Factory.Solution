@@ -1,5 +1,5 @@
 ## <div align="center">Dr. Sillystringz's Factory</div>
-#### <div align="center"> *A website created for tracking business vendors and orders* </div> 
+#### <div align="center"> *A website created for tracking engineers and machinery* </div> 
 ***<p align="right">Morgan Bradford***</p>   
 <p align="center">
 <br>
@@ -10,14 +10,13 @@
 
 ___
 ## 🚩 *Description*:    
-### *Use this website to create and store a list a vendors your business has relationships with, as well as orders that your vendors have ordered. This website will allow you to view vendors(name, description) and order details (title, description, cost, date/time of order) of those entered.*
+### *This website allows users to track their engineers and machines, and establish relationships between the two based on licensure.*
 
 
 ## 🔧 *Setup/Installation instructions:*
 #### 🌐 From the web:
 * Go to my GitHub repository, using following [URL](https://github.com/MorganJBradford/Factory.Solution.git).
 * Click the "Code" <img src="README-files/download-button.png" alt="code button" height="20" align="center"/> and click the 'Download zip' option ![img](README-files/Capture.JPG).
-* Unzip the file, navigate to the `Models` directory to check code or to the `ModelTests` directory to see tests.
 #### ⚙️ From the terminal: 
 * Clone my repository from GitHub using `git clone https://github.com/MorganJBradford/Factory.Solution.git` in your terminal or GitBash
 * Navigate to the downloaded folder using the '*cd*' command
