@@ -1,6 +1,6 @@
-namespace ProjectName
+namespace Factory.Models
 {
-  public class ClassName
+  public class Engineer
   {
     // properties, constructors, methods, etc. go here
   }
