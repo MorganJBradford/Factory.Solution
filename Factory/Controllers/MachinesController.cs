@@ -95,7 +95,7 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult AddEngineer(Machine machine, int EngineerId)
     {
-      if (EngineerId == 0)
+      if (EngineerId != 0)
       {
         _db.Repair.Add(new Repair() { EngineerId = EngineerId, MachineId = machine.MachineId });
       }
