@@ -1,7 +1,7 @@
 namespace Factory.Models
 {
-  public class FactoryContext
+  public class FactoryContext : DbContext
   {
-    // properties, constructors, methods, etc. go here
+    public DbSet<Engineer> Engineers { get; set; }
   }
 }
