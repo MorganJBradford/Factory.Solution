@@ -19,11 +19,13 @@ else
   @foreach (var join in Model.JoinEntities)
   {
     <li>@join.Machine.Name</li>
+    @Html.Hidden("joinId", @join.RepairId)
+    <input type="submit" value="Delete"/>
   }
   </ul>
 }
 
-<button>@Html.ActionLink("Add a machine", "AddMachine", new { id = Model.EngineerId })</button>
+<button>@Html.ActionLink("Assign a machine", "AddMachine", new { id = Model.EngineerId })</button>
 <button>@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</button>
 <button>@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</button>
 <hr/>
