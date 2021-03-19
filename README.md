@@ -1,4 +1,4 @@
-## <div align="center">Pierre's Vender and Order Tracker</div>
+## <div align="center">Dr. Sillystringz's Factory</div>
 #### <div align="center"> *A website created for tracking business vendors and orders* </div> 
 ***<p align="right">Morgan Bradford***</p>   
 <p align="center">
@@ -21,7 +21,7 @@ ___
 #### ⚙️ From the terminal: 
 * Clone my repository from GitHub using `git clone https://github.com/MorganJBradford/PierresTracker.Solution.git` in your terminal or GitBash
 * Navigate to the downloaded folder using ***cd*** command
-* Execute **code .** command in your terminal and it will open all source code in your code editor.    
+<!-- * Execute **code .** command in your terminal and it will open all source code in your code editor.     -->
 ⚠️ *Note: To run this project locally you will need to have .NET Core. You can check if you have .NET Core by running dotnet --version in the command line. If you do not have .NET Core please find more information and download [here](https://dotnet.microsoft.com/download/dotnet)*
 
 #### 🏁 Running Tests:
