@@ -74,5 +74,14 @@ namespace Factory.Controllers
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == 0);
       return View(thisEngineer);
     }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == 0);
+      _db.Engineers.Remove(thisEngineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
