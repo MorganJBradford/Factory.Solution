@@ -34,9 +34,9 @@ ___
 * A page called Data Import will open on MySQL Workbench. For _Import options_ select "Import from Self-Contained file", then select the file labeled "salon_db_structure.sql". This file will be in the top level of this projects directory. Next, in the _Default Schema to be Imported_ click the button "New...", you may name your scheme as you prefer, for the purposes of instruction mine is labeled hair_salon. When your view resembles the image below, select "Start Import" (circled in the photo below):
 ![img](README-files/select-file.JPG)
 
-2. Connect Database to HairSalon.Solution
+2. Connect Database to Factor.Solution
 
-* Create a file named "appsettings.json" in the top level of the production directory 'HairSalon.Solution/HairSalon'. 
+* Create a file named "appsettings.json" in the top level of the production directory 'Factor.Solution/Factor'. 
 **Uploading to your own repository**: If using vscode and "appsettings.json" is is not grayed out like in the image below, you may need to commit the .gitignore file included in this project first. If "appsettings.json" is not grayed out **do not upload your project**
 ![img](README-files/appsettings.JPG)
 
@@ -58,12 +58,12 @@ If you are using a server other than the default server, you will need to change
 
 3. Run Application
 
-* From the top level directory enter 'cd HairSalon' in the command line.
+* From the top level directory enter 'cd Factory' in the command line.
 * Run the command 'dotnet restore' to download dependencies required to run the project.
-* Next, enter 'dotnet run' the in command line. You should a message similar to the following populate in your terminal:
+* Next, enter 'dotnet run' the in command line. You should see a message similar to the following populate in your terminal:
 
 > Hosting environment: Production
-> Content root path: C:\Users\vampi\OneDrive\Desktop\epicodus\HairSalon.Solution\HairSalon
+> Content root path: C:\Users\vampi\OneDrive\Desktop\epicodus\Factory.Solution\Factory
 > Now listening on: http://localhost:5000
 > Now listening on: https://localhost:5001
 > Application started. Press Ctrl+C to shut down.
@@ -80,7 +80,7 @@ If you are using a server other than the default server, you will need to change
 * Git and GitHub
 
 ## 🐛 *Known bugs:*
-* Vendor delete buttons: only works when you delete the last vendor on the list.
+* A relationship between an engineer and a machine may be done multiple times.
 * You you find any bugs, _please_ contact me via my email below.
 
 ## 📬 Contact Information
