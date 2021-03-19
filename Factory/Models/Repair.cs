@@ -2,6 +2,8 @@ namespace Factory.Models
 {
   public class Repair
   {
-    // properties, constructors, methods, etc. go here
+    public int RepairId { get; set; }
+    public int EngineerId { get; set; }
+    public int MachineId { get; set; }
   }
 }
