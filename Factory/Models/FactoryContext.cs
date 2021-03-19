@@ -5,5 +5,7 @@ namespace Factory.Models
     public DbSet<Engineer> Engineers { get; set; }
     public DbSet<Machine> Machines { get; set; }
     public DbSet<Repair> Repair { get; set; }
+
+    public FactoryContext(DbContextOptions options) : base(options) { }
   }
 }
