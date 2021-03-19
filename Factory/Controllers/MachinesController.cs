@@ -1,4 +1,6 @@
+using Factory.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Factory.Controllers
 {
