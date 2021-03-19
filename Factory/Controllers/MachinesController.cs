@@ -1,6 +1,7 @@
 using Factory.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace Factory.Controllers
@@ -28,6 +29,7 @@ namespace Factory.Controllers
       [HttpPost]
       public ActionResult Create(Machine machine, int EngineerId)
       {
+        machine.InstallationDate = DateTime.Now;
         _db.Machines.Add(machine);
         _db.SaveChanges();
         if (EngineerId != 0)
