@@ -9,6 +9,7 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.MachineId)
+  @Html.HiddenFor(model => model.InstallationDate)
   @Html.Label("Make/Model")
   @Html.EditorFor(model => model.Name)
   @Html.Label("Select engineer")
