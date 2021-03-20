@@ -61,7 +61,8 @@ namespace Factory.Controllers
     public ActionResult Edit(Machine machine, int EngineerId, DateTime InstallationDate)
     {
       machine.InstallationDate = InstallationDate;
-      if (EngineerId != 0)
+      bool duplicate = _db.Repair.Any(x => x.EngineerId == EngineerId && x.MachineId == machine.MachineId);
+      if (EngineerId != 0 && !duplicate)
       {
         _db.Repair.Add(new Repair { EngineerId = EngineerId, MachineId = machine.MachineId });
       }
@@ -95,7 +96,8 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult AddEngineer(Machine machine, int EngineerId)
     {
-      if (EngineerId != 0)
+      bool duplicate = _db.Repair.Any(x => x.EngineerId == EngineerId && x.MachineId == machine.MachineId);
+      if (EngineerId != 0 && !duplicate)
       {
         _db.Repair.Add(new Repair() { EngineerId = EngineerId, MachineId = machine.MachineId });
       }
