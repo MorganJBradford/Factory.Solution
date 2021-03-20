@@ -25,17 +25,9 @@ ___
 
 ####  🖥️ View website:
 
-1. Create Database with MySQL Workbench:
+1. Configure appsettings.json.
 
-* Open MySql, navigate to the administration tab (circled in the photo below), then double click on "Data Import/Restore" (see arrow in photo):
-![img](README-files/admin-tab.JPG)
-
-* A page called Data Import will open on MySQL Workbench. For _Import options_ select "Import from Self-Contained file", then select the file labeled "salon_db_structure.sql". This file will be in the top level of this projects directory. Next, in the _Default Schema to be Imported_ click the button "New...", you may name your scheme as you prefer, for the purposes of instruction mine is labeled hair_salon. When your view resembles the image below, select "Start Import" (circled in the photo below):
-![img](README-files/select-file.JPG)
-
-2. Connect Database to Factor.Solution
-
-* Create a file named "appsettings.json" in the top level of the production directory 'Factor.Solution/Factor'. 
+* Create a file named "appsettings.json" in the top level of the production directory 'Factory.Solution/Factory'. 
 **Uploading to your own repository**: If using vscode and "appsettings.json" is is not grayed out like in the image below, you may need to commit the .gitignore file included in this project first. If "appsettings.json" is not grayed out **do not upload your project**
 ![img](README-files/appsettings.JPG)
 
@@ -55,9 +47,10 @@ If you are using a server other than the default server, you will need to change
   }
 }``
 
-3. Run Application
+2. Run Application
 
 * From the top level directory enter 'cd Factory' in the command line.
+* Run 'dotnet ef database update' to create your database.
 * Run the command 'dotnet restore' to download dependencies required to run the project.
 * Next, enter 'dotnet run' the in command line. You should see a message similar to the following populate in your terminal:
 
