@@ -72,7 +72,6 @@ If you are using a server other than the default server, you will need to change
 * Git and GitHub
 
 ## 🐛 *Known bugs:*
-* A relationship between an engineer and a machine may be done multiple times.
 * You you find any bugs, _please_ contact me via my email below.
 
 ## 📬 Contact Information
