@@ -9,9 +9,9 @@
 
 @using (Html.BeginForm())
 {
-<p>
-    Find by name: @Html.TextBox("SearchString")  
-    <input type="submit" value="Search" /></p>
+  @Html.Label("Search by make/model:")
+  @Html.TextBox("SearchString")  
+  <input type="submit" value="Search" />
 }
 
 @if (@Model.Count == 0)
