@@ -16,9 +16,17 @@ namespace Factory.Controllers
       _db = db;
     }
 
-    public ActionResult Index()
+    public ViewResult Index(string sortOrder, string searchString)
     {
-      return View(_db.Machines.ToList());
+      ViewBag.MakeSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+      var machines = from m in _db.Machines
+        select m;
+      if (!String.IsNullOrEmpty(searchString))
+      {
+        machines = machines.Where(m => m.Name.Contains(searchString));
+      }
+      machines = machines.OrderBy(m => m.Name);
+      return View(machines.ToList());
     }
 
     public ActionResult Create()
