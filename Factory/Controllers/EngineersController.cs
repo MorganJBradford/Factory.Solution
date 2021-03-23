@@ -16,9 +16,17 @@ namespace Factory.Controllers
       _db = db;
     }
 
-    public ActionResult Index()
+    public ViewResult Index(string sortOrder, string searchString)
     {
-      return View(_db.Engineers.ToList());
+      ViewBag.MakeSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+      var engineers = from e in _db.Engineers
+        select e;
+      if (!String.IsNullOrEmpty(searchString))
+      {
+        engineers = engineers.Where(e => e.Name.Contains(searchString));
+      }
+      engineers = engineers.OrderBy(e => e.Name);
+      return View(engineers.ToList());
     }
 
     public ActionResult Create()
