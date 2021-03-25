@@ -1,7 +1,6 @@
 @{
-  Layout = "_Layout";
+  Layout = "_MachineLayout";
 }
-
 @using Factory.Models
 @model List<Factory.Models.Machine>
 
@@ -27,7 +26,3 @@
 </ul>
 
 <button>@Html.ActionLink("New machine", "Create")</button>
-<hr/>
-<button>@Html.ActionLink("Home", "Index", "Home")</button>
-<button>@Html.ActionLink("All machines", "Index")</button>
-<button>@Html.ActionLink("All engineers", "Index", "Engineers")</button>

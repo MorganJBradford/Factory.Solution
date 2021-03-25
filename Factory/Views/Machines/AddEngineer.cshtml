@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout";
+  Layout = "_MachineLayout";
 }
 @model Factory.Models.Machine
 
@@ -13,7 +13,3 @@
   @Html.DropDownList("EngineerId")
   <input type="submit" value="Save" />
 }
-
-<button>@Html.ActionLink("Home", "Index", "Home")</button>
-<button>@Html.ActionLink("All machines", "Index")</button>
-<button>@Html.ActionLink("All engineers", "Index", "Engineers")</button>

@@ -1,5 +1,5 @@
 @{
-  Layout = "_Layout";
+  Layout = "_EngineerLayout";
 }
 @model Factory.Models.Engineer
 
@@ -31,7 +31,3 @@ else
 <button>@Html.ActionLink("Assign a machine", "AddMachine", new { id = Model.EngineerId })</button>
 <button>@Html.ActionLink("Edit engineer", "Edit", new { id = Model.EngineerId })</button>
 <button>@Html.ActionLink("Delete engineer", "Delete", new { id = Model.EngineerId })</button>
-<hr/>
-<button>@Html.ActionLink("Home", "Index", "Home")</button>
-<button>@Html.ActionLink("All engineers", "Index")</button>
-<button>@Html.ActionLink("All machines", "Index", "Machines")</button>
