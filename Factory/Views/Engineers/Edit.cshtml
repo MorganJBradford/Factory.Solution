@@ -11,9 +11,9 @@
   @Html.HiddenFor(model => model.EngineerId)
   @Html.HiddenFor(model => model.HireDate)
   @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+  @Html.EditorFor(model => model.Name, new { required="required" })
   @Html.Label("Select machine")
-  @Html.DropDownList("MachineId")
+  @Html.DropDownList("MachineId", (SelectList)ViewBag.MachineId, "None")
   <input type="submit" value="Save"/>
 }
 
