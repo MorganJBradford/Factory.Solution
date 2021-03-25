@@ -64,12 +64,14 @@ If you are using a server other than the default server, you will need to change
 
 
 ## 🛠️ *Technologies used:*
-* C# 9
-* .NET Core v5.0
 * ASP.NET Core MVC
-* MSTest
-* REPL
+* C# 9
+* Entity Framework Core
 * Git and GitHub
+* MSTest
+* MySql
+* .NET v5.0
+* REPL
 
 ## 🐛 *Known bugs:*
 * You you find any bugs, _please_ contact me via my email below.
