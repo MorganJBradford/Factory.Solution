@@ -8,10 +8,9 @@
 @using (Html.BeginForm())
 {
   @Html.Label("Make/Model")
-  @Html.TextBoxFor(model => model.Name)
-
+  @Html.TextBoxFor(model => model.Name, new { required="required" })
   @Html.Label("Select engineer")
-  @Html.DropDownList("EngineerId")
+  @Html.DropDownList("EngineerId", (SelectList)ViewBag.EngineerId, "None")
 
   <input type="submit" value="Add new machine" />
 }
